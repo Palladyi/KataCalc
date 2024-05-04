@@ -26,7 +26,7 @@ public class CalculatorArabian {
         }
         //Если не нашли арифметического действия, завершаем программу
         if (actionIndex == -1) {
-            System.out.println("В Выражении отстутствует оператор +,-,*,/");
+            System.out.println("throws Exception //т.к. строка не является математической операцией");
             return;
         }
         //"2-4".split("-")-> {"2", "4"}
@@ -73,7 +73,7 @@ public class CalculatorArabian {
                 if (isRoman) {
                    if (result <= 0) {
                         //если числа были римские и меньше одного, то
-                        System.out.println("Отрицательное число");
+                        System.out.println("throws Exception //т.к. в римской системе нет отрицательных чисел");
                     } else
                        //если числа были римские, возвращаем результат в римском числе
 
@@ -87,7 +87,7 @@ public class CalculatorArabian {
                 System.out.println("Числа должны быть от 0 включая 10");
             }
         } else {
-            System.out.println("Числа должны быть в одном формате");
+            System.out.println("throws Exception //т.к. используются одновременно разные системы счисления");
 
         }
     }
